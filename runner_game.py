@@ -122,18 +122,18 @@ class Player:
 player = Player()
 enemies = [Enemy(WIDTH + ENEMY_SPAWN_OFFSET, GROUND_LEVEL), Enemy(WIDTH + 750, GROUND_LEVEL)]
 
-
+#oyunu yeniden başlat
 def reset_game():
-    """Oyunu sıfırlar ve başlangıç değerlerini yeniden atar."""
+   
     global player, enemies, lives, score
     player = Player()
     enemies = [Enemy(WIDTH + ENEMY_SPAWN_OFFSET, GROUND_LEVEL), Enemy(WIDTH + 750, GROUND_LEVEL)]
     lives = 30
     score = 0
 
-
+#Müziği açıp kapatır
 def toggle_sound():
-    """Müziği açıp kapatır."""
+   
     global music_enabled
     music_enabled = not music_enabled
     if music_enabled:
@@ -141,7 +141,7 @@ def toggle_sound():
     else:
         music.stop()
 
-
+#Ana menüyü ekrana çizer
 def draw_menu():
    
     screen.clear()
